@@ -1,0 +1,70 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPDYT4oPeQqM/gEX48a36ZM",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mahnooransari78/Assignment-06_Build_Compose_and_Decorate_A_Complete_Traditional_OOP_Practice_Series/blob/main/Assignment_8_The_super()_Function\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KBaNLd8dsjq4",
+        "outputId": "e644d1c1-b358-4801-9d38-84d1a70a7724"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Person constructor called: Name = Ali\n",
+            "Teacher constructor called: Subject = Math\n"
+          ]
+        }
+      ],
+      "source": [
+        "# 8. The super() Function\n",
+        "# Assignment: Create a class Person with a constructor that sets the name. Inherit a class Teacher from it, add a subject field, and use super() to call the base class constructor.\n",
+        "\n",
+        "# Base Class\n",
+        "class Person:\n",
+        "  def __init__(self, name):\n",
+        "    self.name = name\n",
+        "    print(f'Person constructor called: Name = {self.name}')\n",
+        "\n",
+        "class Teacher(Person):\n",
+        "  def __init__(self, name, subject):\n",
+        "    super().__init__(name)  # calling base class constructor\n",
+        "    self.subject = subject\n",
+        "    print(f\"Teacher constructor called: Subject = {self.subject}\")\n",
+        "\n",
+        "# Object creation\n",
+        "Teacher1 = Teacher(\"Ali\", \"Math\")\n"
+      ]
+    }
+  ]
+}
